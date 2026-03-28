@@ -7,8 +7,7 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
-# required_apps = []
+required_apps = ["frappe/erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -20,6 +19,39 @@ app_license = "mit"
 # 		"has_permission": "qsg_app.api.permission.has_app_permission"
 # 	}
 # ]
+
+after_install = ["qsg_app.customisations.warehouse_custom.create_custom_fields",
+                 "qsg_app.customisations.pos_invoice_custom.create_custom_fields",
+                 "qsg_app.customisations.item_custom.create_custom_fields",
+                 "qsg_app.customisations.company_custom.create_custom_fields"]
+
+before_uninstall = ["qsg_app.customisations.warehouse_custom.delete_custom_fields",
+                    "qsg_app.customisations.pos_invoice_custom.delete_custom_fields",
+                    "qsg_app.customisations.item_custom.delete_custom_fields",
+                    "qsg_app.customisations.company_custom.delete_custom_fields"]
+
+after_migrate = ["qsg_app.customisations.warehouse_custom.create_custom_fields",
+                 "qsg_app.customisations.pos_invoice_custom.create_custom_fields",
+                 "qsg_app.customisations.item_custom.create_custom_fields",
+                 "qsg_app.customisations.company_custom.create_custom_fields"]
+
+fixtures = [
+    {
+        "doctype": "Print Format",
+        "filters": [
+            ["name", "=", "POS PF"]
+        ]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "=", "Customer"],
+            ["field_name", "=", "customer_type"],
+            ["property", "=", "options"]
+        ]
+    }
+
+]
 
 # Includes in <head>
 # ------------------
