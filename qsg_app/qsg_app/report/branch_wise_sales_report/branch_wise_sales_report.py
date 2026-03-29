@@ -72,7 +72,7 @@ def get_data(filters):
         values["from_date"] = filters.get("from_date")
         values["to_date"] = filters.get("to_date")
 
-    # ✅ correct fieldname used
+    
     if filters.get("branches"):
         conditions += " AND branches = %(branches)s"
         values["branches"] = filters.get("branches")
@@ -81,7 +81,7 @@ def get_data(filters):
         SELECT 
             name,
             posting_date,
-            branches as branch,   -- 👈 alias for clean column name
+            branches as branch,
             customer,
             owner,
             set_warehouse as warehouse,
