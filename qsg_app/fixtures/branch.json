@@ -1,0 +1,30 @@
+[
+ {
+  "branch": "Al Khor",
+  "docstatus": 0,
+  "doctype": "Branch",
+  "modified": "2026-03-27 23:52:03.914767",
+  "name": "Al Khor"
+ },
+ {
+  "branch": "Main Branch",
+  "docstatus": 0,
+  "doctype": "Branch",
+  "modified": "2026-03-28 09:00:29.579056",
+  "name": "Main Branch"
+ },
+ {
+  "branch": "Al Wakrah",
+  "docstatus": 0,
+  "doctype": "Branch",
+  "modified": "2026-03-27 23:51:53.077629",
+  "name": "Al Wakrah"
+ },
+ {
+  "branch": "Doha",
+  "docstatus": 0,
+  "doctype": "Branch",
+  "modified": "2026-03-27 23:51:41.067174",
+  "name": "Doha"
+ }
+]

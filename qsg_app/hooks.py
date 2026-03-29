@@ -49,7 +49,26 @@ fixtures = [
             ["field_name", "=", "customer_type"],
             ["property", "=", "options"]
         ]
-    }
+    },
+        {
+        "dt": "Workflow",
+        "filters": [
+            ["name", "=", "Purchase Invoice"]
+        ]
+    },
+    {
+        "dt": "Role",
+        "filters": [
+            ["role_name", "in", ["Store Manager", "Cashier"]]
+        ]
+    },
+            {
+        "dt": "Branch",
+        "filters": [
+        ["name", "in", ["Main Branch", "Al Khor","Al Wakrah","Doha"]]
+    ]
+    },
+    
 
 ]
 
